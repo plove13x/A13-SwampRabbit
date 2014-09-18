@@ -10,21 +10,36 @@ body {
 }
 
 
-.image_wrapper {
-  height: 200px;
-  width: 33%;
-  overflow: hidden;
-  display: inline-block;
-}
-
-.image_image {
-  height: 200px;
-  width: 100%;
-}
-
 .image_container {
   margin: auto;
   margin-top: rem(250);
   width: 965px;
   border: red solid 1px;
+  .image_wrapper {
+      height: 200px;
+      width: 33%;
+      overflow: hidden;
+      display: inline-block;
+      .image_image {
+          height: 200px;
+          width: 100%;
+      }
+  }
+}
+
+
+
+@media (max-width: 480px) {
+    .image_container {
+      width: 480px;
+      height: 480px;
+      overflow: hidden;
+      .image_wrapper {
+        width: 480px;
+        height: 480px;
+        .image_image {
+          height: 480px;
+        }
+      }     
+    }
 }
