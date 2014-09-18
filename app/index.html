@@ -23,9 +23,28 @@
   </head>
   <body>
 
+
+
 <div>
     Swamp Rabbit Project
 </div>
+
+<!-- container for images from flickr api -->
+<div class="image_container"></div>
+  
+
+
+
+
+<!--flickr image template -->
+<script id="image_template" type="text/template">
+   <div class="image_wrapper">
+    <img class="image_image" src="https://farm<%= farm%>.staticflickr.com/<%= server %>/<%= id %>_<%= secret %>.jpg">
+    </div>
+</script>
+ 
+
+
 
 
 
