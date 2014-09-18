@@ -20,3 +20,29 @@ $.ajax({
 	})
 });
 
+
+$('div').hammer({}).bind('panleft', function(ev){
+	
+	$(this).textContent = ev.type + " gesture detected.";
+
+})
+
+
+
+
+// var mc = new Hammer($('div')[0]);
+// mc.on("panleft panright tap press", function(ev) {
+// 	$('div').textContent = ev.type + " gesture detected.";
+// });
+
+
+// var myElement = document.getElementById('myElement');
+
+// // create a simple instance
+// // by default, it only adds horizontal recognizers
+// var mc = new Hammer(myElement);
+
+// // listen to events...
+// mc.on("panleft panright tap press", function(ev) {
+//     myElement.textContent = ev.type +" gesture detected.";
+// });
