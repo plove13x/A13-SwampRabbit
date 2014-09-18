@@ -9,8 +9,8 @@ $grid-columns: 3;
 
 body {
     @include outer-container;
-    $tablet:
-    $fullSize: new-breakpoint(min-width 965px);
+    /*$tablet:
+    $fullSize: new-breakpoint(min-width 965px);*/
     margin: 0 auto;
     max-width: 480px;
     text-align: center;    
@@ -23,6 +23,25 @@ body {
 header { 
   
 }
+
+
+
+.imgContainer {
+      width: 480px;
+      height: 360px;
+      overflow: hidden;
+      .image_wrapper {
+        width: 480px;
+        height: 360px;
+      }
+        .image_image {
+          height: 360px;
+        }
+}
+
+
+
+
 
 .imgContainer img {
   @include span-columns(3);
@@ -65,23 +84,32 @@ $largerVersion: new-breakpoint(min-width 480px 6);
 
 
 
+
+
+
 /*
-.image_wrapper {
-  height: 200px;
-  width: 33%;
-  overflow: hidden;
-  display: inline-block;
-}
-
-.image_image {
-  height: 200px;
-  width: 100%;
-}
-
 .image_container {
   margin: auto;
   margin-top: rem(250);
   width: 965px;
   border: red solid 1px;
+  .image_wrapper {
+      height: 200px;
+      width: 33%;
+      overflow: hidden;
+      display: inline-block;
+      .image_image {
+          height: 200px;
+          width: 100%;
+      }
+  }
 }
+
+
+
+
+
+@media (max-width: 480px) {
+    
+
 */
