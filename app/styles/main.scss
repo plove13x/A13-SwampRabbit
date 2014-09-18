@@ -1,15 +1,102 @@
  // Bourbon & Neat
 @import '../../bower_components/bourbon/dist/bourbon';
+$grid-columns: 3;
 @import '../../bower_components/neat/app/assets/stylesheets/neat';
+$tablet: new-breakpoint(min-width 480px max-width 965px); 
+$fullSize: new-breakpoint(min-width 965px);
 
 // Custom Styles
+
 body {
-  background: #fafafa;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #333;
+    @include outer-container;
+    /*$tablet:*/
+    margin: 0 auto;
+    max-width: 480px;
+    text-align: center;   
+    color: black; 
+
+    @include media($fullSize) {
+      min-width: 1024px;
+    }
+}
+
+.masterContainer {
+  /*margin: 0 auto;*/
+}
+
+header { 
+  
+}
+
+.imgContainer {
+      @include span-columns(3);
+      height: 360px;
+      overflow: hidden;
+      .image_wrapper {
+        height: 360px;
+      }
+        .image_image {
+        height: 360px;
+      }
+
+  @include media($fullSize) {
+      @include span-columns(1);
+      min-width: 1024px;
+  }
+
 }
 
 
+
+.imgContainer img {
+  @include span-columns(3);
+
+  @include media($fullSize) {
+      @include span-columns(1);
+  }
+
+  .contact-info a{
+    display:block;
+  }
+}
+
+
+
+
+// @media (min-width: 480px) and (max-width: 965px) {
+
+
+// }
+
+
+
+/*$largerVersion: new-breakpoint(min-width 480px 6);*/
+
+
+
+
+
+/*header {
+    @include span-columns(12);
+    background-color: silver;
+}
+
+.testDiv {
+    @include span-columns(6);
+    display: inline-block;
+    background-color: green;
+    padding: 0;
+    margin
+}
+*/
+
+
+
+
+
+
+
+/*
 .image_container {
   margin: auto;
   margin-top: rem(250);
@@ -29,17 +116,9 @@ body {
 
 
 
+
+
 @media (max-width: 480px) {
-    .image_container {
-      width: 480px;
-      height: 480px;
-      overflow: hidden;
-      .image_wrapper {
-        width: 480px;
-        height: 480px;
-        .image_image {
-          height: 480px;
-        }
-      }     
-    }
-}
+    
+
+*/
