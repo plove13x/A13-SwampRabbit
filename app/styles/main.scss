@@ -2,18 +2,22 @@
 @import '../../bower_components/bourbon/dist/bourbon';
 $grid-columns: 3;
 @import '../../bower_components/neat/app/assets/stylesheets/neat';
+$tablet: new-breakpoint(min-width 480px max-width 965px); 
+$fullSize: new-breakpoint(min-width 965px);
 
 // Custom Styles
 
-
-
 body {
     @include outer-container;
-    /*$tablet:
-    $fullSize: new-breakpoint(min-width 965px);*/
+    /*$tablet:*/
     margin: 0 auto;
     max-width: 480px;
-    text-align: center;    
+    text-align: center;   
+    color: black; 
+
+    @include media($fullSize) {
+      min-width: 1024px;
+    }
 }
 
 .masterContainer {
@@ -24,35 +28,36 @@ header {
   
 }
 
-
-
 .imgContainer {
-      width: 480px;
+      @include span-columns(3);
       height: 360px;
       overflow: hidden;
       .image_wrapper {
-        width: 480px;
         height: 360px;
       }
         .image_image {
-          height: 360px;
-        }
+        height: 360px;
+      }
+
+  @include media($fullSize) {
+      @include span-columns(1);
+      min-width: 1024px;
+  }
+
 }
-
-
 
 
 
 .imgContainer img {
   @include span-columns(3);
 
-    @include media($fullSize) {
+  @include media($fullSize) {
       @include span-columns(1);
-    }
-}
+  }
 
-.contact-info a{
-  display:block;
+  .contact-info a{
+    display:block;
+  }
 }
 
 
@@ -63,9 +68,13 @@ header {
 
 // }
 
-$largerVersion 
 
-$largerVersion: new-breakpoint(min-width 480px 6);
+
+/*$largerVersion: new-breakpoint(min-width 480px 6);*/
+
+
+
+
 
 /*header {
     @include span-columns(12);
