@@ -9,3 +9,22 @@ body {
   color: #333;
 }
 
+
+.image_wrapper {
+  height: 200px;
+  width: 33%;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.image_image {
+  height: 200px;
+  width: 100%;
+}
+
+.image_container {
+  margin: auto;
+  margin-top: rem(250);
+  width: 965px;
+  border: red solid 1px;
+}
