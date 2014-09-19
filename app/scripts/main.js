@@ -15,17 +15,46 @@ $.ajax({
 })
 .done(function(data){
 	var photos = data.photos.photo;
-	_.each(photos, function(photo){ 
+	_.each(photos, function(photo){
 		renTemplate('.imgContainer','#image_template',photo);
 	})
 });
 
+/////// MAP CREATE ////////
 
+//traverlersrest LatLng dictates map center
+var travelersrest = new google.maps.LatLng(34.967617, -82.443455);
+//swamprabbitbrewery LatLng dictates icon location
+var swamprabbitbrewery = new google.maps.LatLng(34.967617, -82.443455);
 
+function initialize() {
+var mapOptions = {
+zoom: 13,
+center: travelersrest
+};
 
-$('div').hammer({}).bind('panleft tap', function(ev){
-	
-	$(this).html(ev.type + " gesture detected.");
+var map = new google.maps.Map(document.getElementById('map-canvas'),
+mapOptions);
 
+var marker = new google.maps.Marker({
+map:map,
+///allows you to drag the marker if set to true
+draggable:true,
+///google.maps.Animation. can be set to BOUNCE or DROP
+animation: google.maps.Animation.BOUNCE,
+position: swamprabbitbrewery
 });
+}
+//delays Google Map related script until page has loaded
+//run function initialize once the page has loaded
+google.maps.event.addDomListener(window, 'load', initialize);
 
+///////////////////////////
+
+
+
+//  $('div').hammer({}).bind('panleft tap', function(ev){
+//
+//  	$(this).html(ev.type + " gesture detected.");
+//
+//  });
