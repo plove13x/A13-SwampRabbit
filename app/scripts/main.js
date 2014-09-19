@@ -23,13 +23,13 @@ $.ajax({
 
 
 
-<<<<<<< HEAD
-$('div').hammer({}).bind('panleft panright tap', function(ev){
-=======
-$('div').hammer({}).bind('panleft tap', function(ev){
->>>>>>> 90be0db2ef898a47641b526bc8d7c93f4736b068
+// <<<<<<< HEAD
+// $('div').hammer({}).bind('panleft panright tap', function(ev){
+// =======
+// $('div').hammer({}).bind('panleft tap', function(ev){
+// >>>>>>> 90be0db2ef898a47641b526bc8d7c93f4736b068
 	
-	$(this).html(ev.type + " gesture detected.");
+// 	$(this).html(ev.type + " gesture detected.");
 
-});
+// });
 
