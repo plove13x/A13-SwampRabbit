@@ -13,7 +13,7 @@ body {
     margin: 0 auto;
     max-width: 480px;
     text-align: center;   
-    color: black; 
+    color: yellow; 
 
 
 
@@ -38,7 +38,7 @@ img {
       overflow: hidden;
       .image_wrapper {
       }
-        .image_image {
+      .image_image {
       }
 
   @include media($fullSize) {
