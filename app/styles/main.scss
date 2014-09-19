@@ -35,24 +35,18 @@ img {
   }
 
 .imgContainer {
-      /*@include span-columns(3);*/
-      /*height: 360px;*/
-      /*overflow: hidden;*/
+      overflow: hidden;
       .image_wrapper {
-        /*height: 360px;*/
       }
-        .image_image {
-        /*height: 360px;*/
+      .image_image {
       }
 
   @include media($fullSize) {
       @include span-columns(1);
-      min-width: 1024px;
+      min-width: 965px;
   }
 
 }
-
-
 
 .imgContainer img {
   @include span-columns(3);
