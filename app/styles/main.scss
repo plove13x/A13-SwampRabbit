@@ -11,6 +11,21 @@ $secondary-color: #97c884; // Light Green Color
 
 // Custom Styles
 
+html, body {
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+
+
+#map-canvas {
+  height: 200px;
+  margin: 0px;
+  padding: 0px;
+}
+
+
 header {
   width: 100%;
   //background-color: rgba(255, 255, 255, .3);
@@ -106,6 +121,9 @@ body {
   }
 }
 
+
+
+
 footer {
   width: 100%;
   padding: rem(15) 0 rem(20) 0;
@@ -125,6 +143,7 @@ footer {
     color: #eee;
   }
 }
+
 
 
 // @media (min-width: 480px) and (max-width: 965px) {
