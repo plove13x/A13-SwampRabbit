@@ -23,7 +23,7 @@ $.ajax({
 
 
 
-$('div').hammer({}).bind('panleft', function(ev){
+$('div').hammer({}).bind('panleft tap', function(ev){
 	
 	$(this).html(ev.type + " gesture detected.");
 
