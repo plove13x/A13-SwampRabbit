@@ -15,8 +15,10 @@ body {
     text-align: center;   
     color: black; 
 
+
+
     @include media($fullSize) {
-      min-width: 1024px;
+      min-width: 965px;
     }
 }
 
@@ -28,15 +30,19 @@ header {
   
 }
 
+img {
+    max-width: 100%;
+  }
+
 .imgContainer {
-      @include span-columns(3);
-      height: 360px;
-      overflow: hidden;
+      /*@include span-columns(3);*/
+      /*height: 360px;*/
+      /*overflow: hidden;*/
       .image_wrapper {
-        height: 360px;
+        /*height: 360px;*/
       }
         .image_image {
-        height: 360px;
+        /*height: 360px;*/
       }
 
   @include media($fullSize) {
