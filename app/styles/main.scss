@@ -2,16 +2,39 @@
 @import '../../bower_components/bourbon/dist/bourbon';
 $grid-columns: 3;
 @import '../../bower_components/neat/app/assets/stylesheets/neat';
-$tablet: new-breakpoint(min-width 480px max-width 965px); 
+$tablet: new-breakpoint(min-width 480px max-width 965px);
 $fullSize: new-breakpoint(min-width 965px);
+$primary-font-family: "Libre Baskerville", "Times New Roman", "serif";
+$primary-font-weight: 400;
+$primary-color: #4d5b68; // Dark Blue Color
+$secondary-color: #97c884; // Light Green Color
 
 // Custom Styles
 
+header {
+  width: 100%;
+  //background-color: rgba(255, 255, 255, .3);
+  @include background-image(radial-gradient(circle at 50% 50%, rgba(255, 255, 255, .05) 1%, rgba(242, 242, 242, 0.4) 102%, #fff), url("https://farm4.staticflickr.com/3860/15116209705_9d567dc7f3_b.jpg"));
+  background-position: center, center;
+  background-repeat: no-repeat, repeat;
+  background-size: cover;
+
+  img {
+    padding: rem(20) 0;
+    width: 30%;
+
+    @include media($fullSize) {
+      padding: rem(60);
+    }
+  }
+
+}
+
 body {
-    @include outer-container;
-    text-align: center;   
-    color: black; 
-    max-width: 480px;
+  @include outer-container;
+  text-align: center;
+  color: black;
+  max-width: 480px;
 
     @include media($tablet) {
       min-width: 480px;
@@ -25,6 +48,17 @@ body {
 
 }
 
+.tagline p {
+  font-family: $primary-font-family;
+  font-weight: 400;
+  font-size: rem(18);
+  font-style: italic;
+  color: $primary-color;
+  line-height: 150%;
+  padding: rem(40);
+  margin: 0;
+}
+
 .imgContainer {
   height: 280px;
   // width: 480px;    /* Can see what happens to tablet size image when this is uncommented. */
@@ -32,19 +66,19 @@ body {
 
     @include media($fullSize) {
       min-width: 965px;
-    }   
+    }
 
       .image_wrapper {
         width: 100%;
         height: 280px;
         display: inline-block;
-      
+
           @include media($fullSize) {
             width: 33.33333%;
           }
       }
 
-          
+
 }
 
 .imgContainer img {
@@ -59,11 +93,38 @@ body {
   }
 }
 
-.contact-info a{
+.contact-info {
+  font-family: $primary-font-family;
+  font-size: rem(14);
+  color: $primary-color;
+  padding: rem(40);
+
+  a {
+    color: $secondary-color;
+    line-height: 150%;
     display: block;
+  }
 }
 
+footer {
+  width: 100%;
+  padding: rem(15) 0 rem(20) 0;
+  background-color: #222;
 
+  img {
+    width: rem(40);
+    display: block;
+    margin: 0 auto;
+    padding: rem(15) 0;
+  }
+
+  span {
+    font-family: $primary-font-family;
+    font-size: rem(12);
+    font-style: italic;
+    color: #eee;
+  }
+}
 
 
 // @media (min-width: 480px) and (max-width: 965px) {
@@ -122,6 +183,6 @@ body {
 
 
 @media (max-width: 480px) {
-    
+
 
 */
