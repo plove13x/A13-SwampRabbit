@@ -13,7 +13,7 @@ body {
     margin: 0 auto;
     max-width: 480px;
     text-align: center;   
-    color: yellow; 
+    color: black; 
 
 
 
@@ -47,8 +47,6 @@ img {
   }
 
 }
-
-
 
 .imgContainer img {
   @include span-columns(3);
