@@ -53,8 +53,8 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 
 
- $('div').hammer({}).bind('panleft tap', function(ev){
-
- 	$(this).html(ev.type + " gesture detected.");
-
- });
+//  $('div').hammer({}).bind('panleft tap', function(ev){
+//
+//  	$(this).html(ev.type + " gesture detected.");
+//
+//  });
