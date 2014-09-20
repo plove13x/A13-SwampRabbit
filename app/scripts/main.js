@@ -21,11 +21,15 @@ $.ajax({
 });
 
 /////// MAP CREATE ////////
-
+var map;
 //traverlersrest LatLng dictates map center
 var travelersrest = new google.maps.LatLng(34.967617, -82.443455);
 //swamprabbitbrewery LatLng dictates icon location
-var swamprabbitbrewery = new google.maps.LatLng(34.967617, -82.443455);
+var swamprabbitcycling = new google.maps.LatLng(34.967617, -82.443455);
+var map_icon = {
+  url: "https://googledrive.com/host/0B7cLHyqTKoTqclUyYkxlU1hLYlE/SRC_200x200_White.png",
+  scaledSize: new google.maps.Size(35, 35)
+};
 
 function initialize() {
 var mapOptions = {
@@ -33,7 +37,7 @@ zoom: 13,
 center: travelersrest
 };
 
-var map = new google.maps.Map(document.getElementById('map-canvas'),
+map = new google.maps.Map(document.getElementById('map-canvas'),
 mapOptions);
 
 var marker = new google.maps.Marker({
@@ -42,12 +46,18 @@ map:map,
 draggable:true,
 ///google.maps.Animation. can be set to BOUNCE or DROP
 animation: google.maps.Animation.BOUNCE,
-position: swamprabbitbrewery
+position: swamprabbitcycling,
+icon: map_icon,
 });
+
 }
 //delays Google Map related script until page has loaded
 //run function initialize once the page has loaded
 google.maps.event.addDomListener(window, 'load', initialize);
+//resizes map center on window resize
+google.maps.event.addDomListener(window,'resize',function(){
+	map.setCenter(travelersrest);
+});
 
 ///////////////////////////
 
