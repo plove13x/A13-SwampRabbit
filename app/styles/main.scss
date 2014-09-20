@@ -72,6 +72,10 @@ body {
   line-height: 150%;
   padding: rem(40);
   margin: 0;
+
+  @include media($fullSize) {
+    font-size: rem(24);
+  }
 }
 
 .imgContainer {
@@ -108,6 +112,23 @@ body {
   }
 }
 
+.store-info {
+  display: none;
+  padding: rem(20);
+  background-color: #f5f5f5;
+
+  p {
+    font-family: $primary-font-family;
+    color: $primary-color;
+    font-size: rem(18);
+    line-height: 150%;
+  }
+
+  @include media($fullSize) {
+    display: inherit;
+  }
+}
+
 .contact-info {
   font-family: $primary-font-family;
   font-size: rem(14);
@@ -118,6 +139,10 @@ body {
     color: $secondary-color;
     line-height: 150%;
     display: block;
+  }
+
+  @include media($fullSize) {
+    font-size: rem(18);
   }
 }
 
