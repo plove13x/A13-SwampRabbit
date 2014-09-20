@@ -27,8 +27,8 @@ var travelersrest = new google.maps.LatLng(34.967617, -82.443455);
 //swamprabbitbrewery LatLng dictates icon location
 var swamprabbitcycling = new google.maps.LatLng(34.967617, -82.443455);
 var map_icon = {
-  url: "https://googledrive.com/host/0B7cLHyqTKoTqclUyYkxlU1hLYlE/SRC_200x200_White.png",
-  scaledSize: new google.maps.Size(35, 35)
+  url: "https://googledrive.com/host/0B7cLHyqTKoTqclUyYkxlU1hLYlE/SRC_Map_50x70_Black.png",
+  scaledSize: new google.maps.Size(30, 42)
 };
 
 function initialize() {
