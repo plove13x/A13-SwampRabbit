@@ -28,7 +28,6 @@ html, body {
 
 header {
   width: 100%;
-  //background-color: rgba(255, 255, 255, .3);
   @include background-image(radial-gradient(circle at 50% 50%, rgba(255, 255, 255, .05) 1%, rgba(242, 242, 242, 0.4) 102%, #fff), url("https://farm4.staticflickr.com/3860/15116209705_9d567dc7f3_b.jpg"));
   background-position: center, center;
   background-repeat: no-repeat, repeat;
@@ -38,8 +37,12 @@ header {
     padding: rem(20) 0;
     width: 30%;
 
+    @include media($tablet) {
+      width: rem(200);
+    }
+
     @include media($fullSize) {
-      padding: rem(60);
+      width: rem(200);
     }
   }
 
@@ -73,6 +76,10 @@ body {
   padding: rem(40);
   margin: 0;
 
+  @include media($tablet) {
+    font-size: rem(24);
+  }
+
   @include media($fullSize) {
     font-size: rem(24);
   }
@@ -80,8 +87,11 @@ body {
 
 .imgContainer {
   height: 280px;
-  // width: 480px;    /* Can see what happens to tablet size image when this is uncommented. */
   overflow: hidden;
+
+  @include media($tablet) {
+    height: rem(845);
+  }
 
     @include media($fullSize) {
       min-width: 965px;
@@ -96,8 +106,6 @@ body {
             width: 33.33333%;
           }
       }
-
-
 }
 
 .imgContainer img {
@@ -106,7 +114,6 @@ body {
   overflow: hidden;
 
   @include media($fullSize) {
-      // @include span-columns(1);    MOST LIKELY DOING NOTHING. Set size in .img_wrapper above.
       width: 100%;
       height: 280px;
   }
@@ -124,6 +131,10 @@ body {
     line-height: 150%;
   }
 
+  @include media($tablet) {
+    display: inherit;
+  }
+
   @include media($fullSize) {
     display: inherit;
   }
@@ -139,6 +150,10 @@ body {
     color: $secondary-color;
     line-height: 150%;
     display: block;
+  }
+
+  @include media($tablet) {
+    font-size: rem(18);
   }
 
   @include media($fullSize) {
