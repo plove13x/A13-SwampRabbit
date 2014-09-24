@@ -1,5 +1,5 @@
 'use strict';
-// generated on 2014-09-18 using generator-tiy-webapp 0.0.8
+// generated on 2014-09-16 using generator-tiy-webapp 0.0.8
 
 // Require your modules
 var gulp = require('gulp');
@@ -44,8 +44,10 @@ gulp.task('extras', function () {
 });
 
 gulp.task('clean', function (cb) {
-  rimraf('.tmp', function () {
-    rimraf('dist', cb);
+  return $.cache.clearAll(function(){
+    rimraf('.tmp', function () {
+      rimraf('dist', cb);
+    });
   });
 });
 
